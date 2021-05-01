@@ -2,3 +2,6 @@
 
 ## Overleaf link to the report
 https://www.overleaf.com/9392611729qpdhpgzpwmrp
+
+## Similar project
+https://github.com/juandagilc/Audio-Effects/tree/master/Distortion/Source
