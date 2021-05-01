@@ -1,0 +1,11 @@
+# Juce and Frut directories
+# (used to generate the CMake)
+JUCE/
+FRUT/
+
+# CMakeLists.txt.user file
+AudioDistortion/CMakeLists.txt.user
+
+# QtCreator build files
+AudioDistortion/Builds/Debug
+AudioDistortion/Builds/Release
