@@ -31,6 +31,9 @@ private:
     
     // GUI declarations
     juce::Slider clipSlider;
+    juce::Label textLabel { {}, "The quick brown fox jumps over the lazy dog." };
+    juce::Font textFont   { 12.0f };
+    juce::ComboBox styleMenu;
     
     // GUI-called functions
     void sliderValueChanged(juce::Slider* slider) override;

@@ -182,7 +182,6 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
         //}
         channelOutDataL[i] = currentSample*clip;
         channelOutDataR[i] = currentSample*clip;
-        
     }
     
 }
