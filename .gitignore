@@ -5,10 +5,13 @@ FRUT/
 
 # CMakeLists.txt.user file
 AudioDistortion/CMakeLists.txt.user
+AudioDistortion_JuanGil/CMakeLists.txt.user
 
 # QtCreator build files
 AudioDistortion/Builds/Debug
 AudioDistortion/Builds/Release
+AudioDistortion_JuanGil/Builds/Debug
+AudioDistortion_JuanGil/Builds/Release
 
 # My cartella prove ~Simo
 CMLS_HW2/
