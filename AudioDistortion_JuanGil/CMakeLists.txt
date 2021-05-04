@@ -64,6 +64,7 @@ jucer_project_files("AudioDistortion/Source"
   .         .         .         "Source/PluginProcessor.h"
   x         .         .         "Source/PluginEditor.cpp"
   .         .         .         "Source/PluginEditor.h"
+  .         .         .         "Source/PluginParameter.h"
 )
 
 jucer_project_module(

@@ -234,6 +234,9 @@
 		<Unit filename="/home/michele/Documents/00_UNIVERSITA/02_POLI/01/CMLS/HW2/AudioDistortion_JuanGil/Source/PluginEditor.h">
 			<Option target="AudioDistortion_Shared_Code"/>
 		</Unit>
+		<Unit filename="/home/michele/Documents/00_UNIVERSITA/02_POLI/01/CMLS/HW2/AudioDistortion_JuanGil/Source/PluginParameter.h">
+			<Option target="AudioDistortion_Shared_Code"/>
+		</Unit>
 		<Unit filename="/home/michele/Documents/00_UNIVERSITA/02_POLI/01/CMLS/HW2/AudioDistortion_JuanGil/Source/PluginProcessor.cpp">
 			<Option target="AudioDistortion_Shared_Code"/>
 		</Unit>
