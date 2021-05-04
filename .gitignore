@@ -12,3 +12,8 @@ AudioDistortion/Builds/Release
 
 # My cartella prove ~Simo
 CMLS_HW2/
+
+# The rest
+AudioDistortion/Builds/
+AudioDistortion/JuceLibraryCode/
+AudioDistortion/AudioDistortion.jucer
