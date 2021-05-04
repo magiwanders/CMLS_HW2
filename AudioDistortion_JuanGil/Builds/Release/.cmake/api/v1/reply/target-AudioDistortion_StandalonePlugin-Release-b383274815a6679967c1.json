@@ -1,0 +1,666 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "AudioDistortion"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"jucer_project_end",
+			"target_link_libraries",
+			"_FRUT_set_compiler_and_linker_settings_Linux",
+			"_FRUT_set_compiler_and_linker_settings",
+			"target_compile_options",
+			"target_compile_definitions",
+			"_FRUT_set_JucePlugin_Build_defines",
+			"target_include_directories",
+			"set_target_properties",
+			"_FRUT_set_cxx_language_standard_properties"
+		],
+		"files" : 
+		[
+			"/home/michele/Documents/00_UNIVERSITA/02_POLI/01/CMLS/HW2/FRUT/prefix/FRUT/cmake/Reprojucer.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 219,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2813,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 2819,
+				"parent" : 1
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 2827,
+				"parent" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 5114,
+				"parent" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 5587,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 5587,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 5587,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 5587,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 5607,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 5607,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 5607,
+				"parent" : 5
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 5547,
+				"parent" : 5
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 5586,
+				"parent" : 5
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 5586,
+				"parent" : 5
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 2829,
+				"parent" : 1
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 6048,
+				"parent" : 16
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 6048,
+				"parent" : 16
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 6048,
+				"parent" : 16
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 6048,
+				"parent" : 16
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 6046,
+				"parent" : 16
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 6048,
+				"parent" : 16
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 6048,
+				"parent" : 16
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 6048,
+				"parent" : 16
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 5524,
+				"parent" : 5
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 5533,
+				"parent" : 5
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 5049,
+				"parent" : 4
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 5077,
+				"parent" : 4
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 5104,
+				"parent" : 4
+			},
+			{
+				"command" : 9,
+				"file" : 0,
+				"line" : 5884,
+				"parent" : 29
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-O3 -DNDEBUG"
+				},
+				{
+					"backtrace" : 13,
+					"fragment" : "-m64"
+				},
+				{
+					"backtrace" : 14,
+					"fragment" : "-I/usr/include/freetype2"
+				},
+				{
+					"backtrace" : 14,
+					"fragment" : "-I/usr/include/libpng16"
+				},
+				{
+					"backtrace" : 14,
+					"fragment" : "-I/usr/include/harfbuzz"
+				},
+				{
+					"backtrace" : 14,
+					"fragment" : "-I/usr/include/glib-2.0"
+				},
+				{
+					"backtrace" : 14,
+					"fragment" : "-I/usr/lib/glib-2.0/include"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/webkitgtk-4.0"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/gtk-3.0"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/pango-1.0"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/libmount"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/blkid"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/fribidi"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/cairo"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/lzo"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/pixman-1"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/gdk-pixbuf-2.0"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/gio-unix-2.0"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/cloudproviders"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/atk-1.0"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/at-spi2-atk/2.0"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/dbus-1.0"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/lib/dbus-1.0/include"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/at-spi-2.0"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/libsoup-2.4"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-pthread"
+				},
+				{
+					"backtrace" : 15,
+					"fragment" : "-I/usr/include/libxml2"
+				},
+				{
+					"fragment" : "-std=c++14"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 17,
+					"define" : "JucePlugin_Build_AAX=0"
+				},
+				{
+					"backtrace" : 18,
+					"define" : "JucePlugin_Build_AU=0"
+				},
+				{
+					"backtrace" : 19,
+					"define" : "JucePlugin_Build_AUv3=0"
+				},
+				{
+					"backtrace" : 20,
+					"define" : "JucePlugin_Build_RTAS=0"
+				},
+				{
+					"backtrace" : 21,
+					"define" : "JucePlugin_Build_Standalone=1"
+				},
+				{
+					"backtrace" : 22,
+					"define" : "JucePlugin_Build_Unity=0"
+				},
+				{
+					"backtrace" : 23,
+					"define" : "JucePlugin_Build_VST3=0"
+				},
+				{
+					"backtrace" : 24,
+					"define" : "JucePlugin_Build_VST=0"
+				},
+				{
+					"backtrace" : 25,
+					"define" : "LINUX=1"
+				},
+				{
+					"backtrace" : 26,
+					"define" : "NDEBUG=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 27,
+					"path" : "/home/michele/Documents/00_UNIVERSITA/02_POLI/01/CMLS/HW2/AudioDistortion_JuanGil/Builds/Release/JuceLibraryCode"
+				},
+				{
+					"backtrace" : 27,
+					"path" : "/usr/share/juce/modules"
+				},
+				{
+					"backtrace" : 28,
+					"path" : "/usr/share/juce/modules/juce_audio_processors/format_types/VST3_SDK"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					30
+				],
+				"standard" : "14"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "AudioDistortion_Shared_Code::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "AudioDistortion_StandalonePlugin::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-O3 -DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-m64",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "libAudioDistortion.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "-lasound",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "-lfreetype",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lwebkit2gtk-4.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lgtk-3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lgdk-3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lz",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lpangocairo-1.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lpango-1.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lharfbuzz",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-latk-1.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lcairo-gobject",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lcairo",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lgdk_pixbuf-2.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lsoup-2.4",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lgio-2.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-ljavascriptcoregtk-4.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lgobject-2.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lglib-2.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lgtk-3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lgdk-3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lz",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lpangocairo-1.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lpango-1.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lharfbuzz",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-latk-1.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lcairo-gobject",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lcairo",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lgdk_pixbuf-2.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lgio-2.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lgobject-2.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lglib-2.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "-lcurl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-lsoup-2.4",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "-ljavascriptcoregtk-4.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "-lcurl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "-lrt",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 11,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "AudioDistortion_StandalonePlugin",
+	"nameOnDisk" : "AudioDistortion",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "JUCE Library Code",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "Builds/Release/JuceLibraryCode/include_juce_audio_plugin_client_Standalone.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
