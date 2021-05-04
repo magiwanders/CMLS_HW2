@@ -14,11 +14,11 @@
 //==============================================================================
 /**
 */
-class AudioDistortionAudioProcessorEditor  : public juce::AudioProcessorEditor
+class CMLS_HW2AudioProcessorEditor  : public juce::AudioProcessorEditor, private juce::Slider::Listener
 {
 public:
-    AudioDistortionAudioProcessorEditor (AudioDistortionAudioProcessor&);
-    ~AudioDistortionAudioProcessorEditor() override;
+    CMLS_HW2AudioProcessorEditor (CMLS_HW2AudioProcessor&);
+    ~CMLS_HW2AudioProcessorEditor() override;
 
     //==============================================================================
     void paint (juce::Graphics&) override;
@@ -27,7 +27,13 @@ public:
 private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
-    AudioDistortionAudioProcessor& audioProcessor;
+    CMLS_HW2AudioProcessor& audioProcessor;
+    
+    // GUI declarations
+    juce::Slider clipSlider;
+    
+    // GUI-called functions
+    void sliderValueChanged(juce::Slider* slider) override;
 
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioDistortionAudioProcessorEditor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (CMLS_HW2AudioProcessorEditor)
 };
