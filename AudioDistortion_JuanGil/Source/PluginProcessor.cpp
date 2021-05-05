@@ -94,11 +94,14 @@ void DistortionAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuff
         float* channelData = buffer.getWritePointer (channel);
 
         float out;
-        for (int sample = 0; sample < numSamples; ++sample) {
+        for (int sample = 0; sample < numSamples; ++sample)
+        {
             const float in = channelData[sample] * paramInputGain.getNextValue();
 
-            switch ((int)paramDistortionType.getTargetValue()) {
-                case distortionTypeHardClipping: {
+            switch ((int)paramDistortionType.getTargetValue())
+            {
+                case distortionTypeHardClipping:
+                {
                     float threshold = 0.5f;
                     if (in > threshold)
                         out = threshold;
@@ -108,7 +111,8 @@ void DistortionAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuff
                         out = in;
                     break;
                 }
-                case distortionTypeSoftClipping: {
+                case distortionTypeSoftClipping:
+                {
                     float threshold1 = 1.0f / 3.0f;
                     float threshold2 = 2.0f / 3.0f;
                     if (in > threshold2)
@@ -124,18 +128,21 @@ void DistortionAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuff
                     out *= 0.5f;
                     break;
                 }
-                case distortionTypeExponential: {
+                case distortionTypeExponential:
+                {
                     if (in > 0.0f)
                         out = 1.0f - expf (-in);
                     else
                         out = -1.0f + expf (in);
                     break;
                 }
-                case distortionTypeFullWaveRectifier: {
+                case distortionTypeFullWaveRectifier:
+                {
                     out = fabsf (in);
                     break;
                 }
-                case distortionTypeHalfWaveRectifier: {
+                case distortionTypeHalfWaveRectifier:
+                {
                     if (in > 0.0f)
                         out = in;
                     else

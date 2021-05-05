@@ -152,12 +152,15 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
         for (int sample = 0; sample < buffer.getNumSamples(); ++sample)
         {
             // Step 1: apply the input gain
-            const float in = channelData[sample] * paramInputGain.getNextValue();
+            float inputGainDB = slider_value[0];
+            float inputGain = powf(10.0f, inputGainDB / 20.0f);
+            const float in = channelData[sample] * inputGain;
 
             // Step 2: apply the distortion that has been selected by the user
-            switch ((int)paramDistortionType.getTargetValue())
+            switch (distortion_type)
             {
-                case distortionTypeHardClipping:
+                // Hard clipping
+                case 0:
                 {
                     float threshold = 0.5f;
                     if (in > threshold)
@@ -168,7 +171,8 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                         out = in;
                     break;
                 }
-                case distortionTypeSoftClipping:
+                // Soft clipping
+                case 1:
                 {
                     float threshold1 = 1.0f / 3.0f;
                     float threshold2 = 2.0f / 3.0f;
@@ -185,7 +189,8 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                     out *= 0.5f;
                     break;
                 }
-                case distortionTypeExponential:
+                // Exponential soft clipping
+                case 2:
                 {
                     if (in > 0.0f)
                         out = 1.0f - expf (-in);
@@ -193,12 +198,14 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                         out = -1.0f + expf (in);
                     break;
                 }
-                case distortionTypeFullWaveRectifier:
+                // Full wave rectifier
+                case 3:
                 {
                     out = fabsf (in);
                     break;
                 }
-                case distortionTypeHalfWaveRectifier:
+                // Half wave rectifier
+                case 4:
                 {
                     if (in > 0.0f)
                         out = in;
@@ -206,7 +213,8 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                         out = 0.0f;
                     break;
                 }
-                case interModulationDistortion:
+                // Intermodulation distortion
+                case 8:
                 {
                     out = powf(in, 2);
                 }
@@ -216,11 +224,12 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
             // This is both to avoid aliasing and give a further parameter to control
             // TODO ....
             //float filtered = filters[channel]->processSingleSampleRaw (out);
-            float filtered = out;
+            float filtered = out * 1.0;
 
             // Step 4: apply the output gain
-            // TODO ....
-            channelData[sample] = filtered * paramOutputGain.getNextValue();
+            float outputGainDB = slider_value[4];
+            float outputGain = powf(10.0f, outputGainDB / 20.0f);
+            channelData[sample] = filtered * outputGain;
         }
     }
     
@@ -245,16 +254,9 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
         //   channelOutDataL[i] = currentSample;
         //    channelOutDataR[i] = currentSample;
         //}
-<<<<<<< HEAD
         //channelOutDataL[i] = currentSample*clip;
         //channelOutDataR[i] = currentSample*clip;
-    }
-=======
-        channelOutDataL[i] = currentSample*clip;
-        channelOutDataR[i] = currentSample*clip;
-    }*/
->>>>>>> 56d72c776375135502da0c9e76f72af8eed75836
-    
+     */
 }
 
 //==============================================================================

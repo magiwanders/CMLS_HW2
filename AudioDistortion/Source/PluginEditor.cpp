@@ -171,14 +171,16 @@ void CMLS_HW2AudioProcessorEditor::renderSliders()
 
     // Sliders
     int j=0;
-    for (i=0; i<N_SLIDERS; i++) {
+    for (i=0; i<N_SLIDERS; i++)
+    {
         int st = sliderType[i];
         slider[i].setRange(limits[st][0], limits[st][1]);
         slider[i].setTextValueSuffix(suffix[st]);
         slider[i].addListener(this);
         label[i].setText (label_text[i], juce::dontSendNotification);
         label[i].attachToComponent (&label[i], true);
-        if (isVisible[i]==1) {
+        if (isVisible[i]==1)
+        {
             j++;
             addAndMakeVisible(slider[i]);
             addAndMakeVisible(label[i]);
@@ -195,9 +197,11 @@ void CMLS_HW2AudioProcessorEditor::renderSliders()
     setSize (400, 100+j*50);
 }
 
-void CMLS_HW2AudioProcessorEditor::allInvisible() {
-    for (i=0; i<N_SLIDERS; i++) {
-        audioProcessor.set_slider_value(i, 0));
+void CMLS_HW2AudioProcessorEditor::allInvisible()
+{
+    for (i=0; i<N_SLIDERS; i++)
+    {
+        audioProcessor.set_slider_value(i, 0);
         slider[i].setVisible(false);
     }
 }

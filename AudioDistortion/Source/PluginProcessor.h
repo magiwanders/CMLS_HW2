@@ -65,5 +65,25 @@ private:
     
     // Custom variables
     float slider_value[5];
+    /* 0: input gain (dB)
+     * 1:
+     * 2:
+     * 3:
+     * 4: output gain (dB)
+     */
+
+
     int distortion_type;
+    /* 0: Hard Clipping
+     * 1: Soft Clipping
+     * 2: Exponential Soft Clipping
+     * 3: Full Wave Rectifier
+     * 4: Half Wave Rectifier
+     * 5: Tube Saturation
+     * 6: Even Harmonic Distortion
+     * 7: Odd Harmonic Distortion
+     * 8: Intermodulation Distortion
+     * 9: Slew Rate & Overshoot Distortion
+     * 10: Phase Distortion
+     */
 };
