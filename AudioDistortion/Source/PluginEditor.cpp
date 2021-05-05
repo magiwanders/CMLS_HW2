@@ -111,7 +111,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
         case 3:  {
-            int isVisibleNew[5] = {1, 0, 0, 0, 1};
+            int isVisibleNew[5] = {1, 0, 5, 0, 1};
             int newType[5] = {4, 0, 0, 0, 4};
             int newLabel[5] = {0, 0, 0, 0, 1};
             int newDefault[5] = {0, 0, 0, 0, 0};
@@ -235,6 +235,8 @@ void CMLS_HW2AudioProcessorEditor::renderSliders()
         slider[i].addListener(this);
         audioProcessor.set_slider_value(i, default_value[i]);
         slider[i].setValue(default_value[i]);
+        slider[i].setSkewFactor(skew_value[st], false);
+        slider[i].setDoubleClickReturnValue(true, default_value[i]);
         
         label[i].setText(label_text[whichLabel[i]] , juce::dontSendNotification);
         label[i].attachToComponent (&slider[i], true);

@@ -54,6 +54,7 @@ private:
     
     // Characteristics of the 5 types of slider
     int limits[5][2] = {{-24, 24}, {0, 1}, {20, 20000}, {-1, 1}, {-80, 6}};
+    float skew_value[5] = {1, 0.3, 1, 1, 3};
     juce::String suffix[5] = {"dB", "", "Hz", "", "dB"};
     juce::String label_text[6] = {"IN Gain", "OUT Gain", "Threshold", "Threshold 1", "Threshold 2", "Another Slider"};
     
