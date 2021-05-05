@@ -56,7 +56,8 @@ void CMLS_HW2AudioProcessorEditor::resized()
     int j=0;
     for (i=0; i<N_SLIDERS; i++) {
         if (isVisible[i]) {
-            slider[i].setBounds(10, 100+j*50, getWidth()-110, 20);
+            slider[i].setBounds(100, 100+j*50, getWidth()-110, 20);
+            label[i].setBounds(10, 100+j*50, getWidth()-110, 20);
             j++;
         }
     }
@@ -92,74 +93,122 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
         case 1: {
             int isVisibleNew[5] = {1, 1, 0, 0, 1};
             int newType[5] = {4, 1, 0, 0, 4};
+            int newLabel[5] = {0, 2, 0, 0, 1};
+            int newDefault[5] = {0, 1, 0, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
+            std::copy(newLabel, newLabel+ 5, whichLabel);
+            std::copy(newDefault, newDefault +5, default_value);
         }; break;
         case 2:  {
-            int isVisibleNew[5] = {1, 1, 1, 0, 0};
-            int newType[5] = {1, 4, 3, 0, 0};
+            int isVisibleNew[5] = {1, 1, 1, 0, 1};
+            int newType[5] = {4, 1, 1, 0, 4};
+            int newLabel[5] = {0, 3, 4, 0, 1};
+            int newDefault[5] = {0, 1, 1, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
+            std::copy(newLabel, newLabel+ 5, whichLabel);
+            std::copy(newDefault, newDefault +5, default_value);
         }; break;
         case 3:  {
-            int isVisibleNew[5] = {1, 1, 1, 1, 1};
-            int newType[5] = {1, 4, 4, 4, 4};
+            int isVisibleNew[5] = {1, 0, 0, 0, 1};
+            int newType[5] = {4, 0, 0, 0, 4};
+            int newLabel[5] = {0, 0, 0, 0, 1};
+            int newDefault[5] = {0, 0, 0, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
+            std::copy(newLabel, newLabel+ 5, whichLabel);
+            std::copy(newDefault, newDefault +5, default_value);
         }; break;
         case 4:  {
-            int isVisibleNew[5] = {1, 1, 0, 0, 0};
-            int newType[5] = {1, 3, 0, 0, 0};
+            int isVisibleNew[5] = {1, 0, 0, 0, 1};
+            int newType[5] = {4, 0, 0, 0, 4};
+            int newLabel[5] = {0, 0, 0, 0, 1};
+            int newDefault[5] = {0, 0, 0, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
+            std::copy(newLabel, newLabel+ 5, whichLabel);
+            std::copy(newDefault, newDefault +5, default_value);
         }; break;
         case 5:  {
-            int isVisibleNew[5] = {1, 0, 0, 0, 0};
-            int newType[5] = {3, 0, 0, 0, 0};
+            int isVisibleNew[5] = {1, 0, 0, 0, 1};
+            int newType[5] = {4, 0, 0, 0, 4};
+            int newLabel[5] = {0, 0, 0, 0, 1};
+            int newDefault[5] = {0, 0, 0, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
+            std::copy(newLabel, newLabel+ 5, whichLabel);
+            std::copy(newDefault, newDefault +5, default_value);
         }; break;
         case 6:  {
-            int isVisibleNew[5] = {1, 0, 0, 0, 0};
-            int newType[5] = {1, 0, 0, 0, 0};
+            int isVisibleNew[5] = {1, 0, 0, 0, 1};
+            int newType[5] = {4, 0, 0, 0, 4};
+            int newLabel[5] = {0, 0, 0, 0, 1};
+            int newDefault[5] = {0, 0, 0, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
+            std::copy(newLabel, newLabel+ 5, whichLabel);
+            std::copy(newDefault, newDefault +5, default_value);
         }; break;
         case 7:  {
-            int isVisibleNew[5] = {1, 0, 0, 0, 0};
-            int newType[5] = {1, 0, 0, 0, 0};
+            int isVisibleNew[5] = {1, 0, 0, 0, 1};
+            int newType[5] = {4, 0, 0, 0, 4};
+            int newLabel[5] = {0, 0, 0, 0, 1};
+            int newDefault[5] = {0, 0, 0, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
+            std::copy(newLabel, newLabel+ 5, whichLabel);
+            std::copy(newDefault, newDefault +5, default_value);
         }; break;
         case 8:  {
-            int isVisibleNew[5] = {1, 0, 0, 0, 0};
-            int newType[5] = {1, 0, 0, 0, 0};
+            int isVisibleNew[5] = {1, 0, 0, 0, 1};
+            int newType[5] = {4, 0, 0, 0, 4};
+            int newLabel[5] = {0, 0, 0, 0, 1};
+            int newDefault[5] = {0, 0, 0, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
+            std::copy(newLabel, newLabel+ 5, whichLabel);
+            std::copy(newDefault, newDefault +5, default_value);
         }; break;
         case 9:  {
-            int isVisibleNew[5] = {1, 0, 0, 0, 0};
-            int newType[5] = {1, 0, 0, 0, 0};
+            int isVisibleNew[5] = {1, 0, 0, 0, 1};
+            int newType[5] = {4, 0, 0, 0, 4};
+            int newLabel[5] = {0, 0, 0, 0, 1};
+            int newDefault[5] = {0, 0, 0, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
+            std::copy(newLabel, newLabel+ 5, whichLabel);
+            std::copy(newDefault, newDefault +5, default_value);
         }; break;
         case 10: {
-            int isVisibleNew[5] = {1, 0, 0, 0, 0};
-            int newType[5] = {1, 0, 0, 0, 0};
+            int isVisibleNew[5] = {1, 0, 0, 0, 1};
+            int newType[5] = {4, 0, 0, 0, 4};
+            int newLabel[5] = {0, 0, 0, 0, 1};
+            int newDefault[5] = {0, 0, 0, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
+            std::copy(newLabel, newLabel+ 5, whichLabel);
+            std::copy(newDefault, newDefault +5, default_value);
         };  break;
         case 11:  {
-            int isVisibleNew[5] = {1, 1, 0, 0, 0};
-            int newType[5] = {1, 3, 0, 0, 0};
+            int isVisibleNew[5] = {1, 0, 0, 0, 1};
+            int newType[5] = {4, 0, 0, 0, 4};
+            int newLabel[5] = {0, 0, 0, 0, 1};
+            int newDefault[5] = {0, 0, 0, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
+            std::copy(newLabel, newLabel+ 5, whichLabel);
+            std::copy(newDefault, newDefault +5, default_value);
         }; break;
         default:  {
-            int isVisibleNew[5] = {1, 1, 1, 1, 1};
-            int newType[5] = {0, 1, 2, 3, 4};
+            int isVisibleNew[5] = {1, 0, 0, 0, 1};
+            int newType[5] = {4, 0, 0, 0, 4};
+            int newLabel[5] = {0, 0, 0, 0, 1};
+            int newDefault[5] = {0, 0, 0, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
+            std::copy(newLabel, newLabel+ 5, whichLabel);
+            std::copy(newDefault, newDefault +5, default_value);
         }; break;
     }
     renderSliders();
@@ -174,17 +223,21 @@ void CMLS_HW2AudioProcessorEditor::renderSliders()
     for (i=0; i<N_SLIDERS; i++)
     {
         int st = sliderType[i];
-        slider[i].setRange(limits[st][0], limits[st][1]);
-        slider[i].setTextValueSuffix(suffix[st]);
-        slider[i].addListener(this);
-        label[i].setText (label_text[i], juce::dontSendNotification);
-        label[i].attachToComponent (&label[i], true);
         if (isVisible[i]==1)
         {
             j++;
             addAndMakeVisible(slider[i]);
             addAndMakeVisible(label[i]);
         }
+        
+        slider[i].setRange(limits[st][0], limits[st][1]);
+        slider[i].setTextValueSuffix(suffix[st]);
+        slider[i].addListener(this);
+        audioProcessor.set_slider_value(i, default_value[i]);
+        slider[i].setValue(default_value[i]);
+        
+        label[i].setText(label_text[whichLabel[i]] , juce::dontSendNotification);
+        label[i].attachToComponent (&slider[i], true);
     }
 
     // LPF cutoff frequency
@@ -201,7 +254,6 @@ void CMLS_HW2AudioProcessorEditor::allInvisible()
 {
     for (i=0; i<N_SLIDERS; i++)
     {
-        audioProcessor.set_slider_value(i, 0);
         slider[i].setVisible(false);
     }
 }

@@ -46,14 +46,16 @@ private:
     
     // GUI declarations
     juce::Label label[N_SLIDERS];
-    juce::String label_text[N_SLIDERS] = {"dB Slider", "0-1 Slider", "Hz Slider", "Audio (lin) Slider", "Audio (dB) Slider"};
     int isVisible[N_SLIDERS] = {1, 1, 1, 1, 1};
     int sliderType[N_SLIDERS] = {0, 1, 2, 3, 4};
+    int whichLabel[N_SLIDERS] = {0, 1, 2, 3, 4};
+    int default_value[N_SLIDERS] = {0, 0, 0, 0, 0};
     juce::Slider slider[N_SLIDERS];
     
     // Characteristics of the 5 types of slider
     int limits[5][2] = {{-24, 24}, {0, 1}, {20, 20000}, {-1, 1}, {-80, 6}};
     juce::String suffix[5] = {"dB", "", "Hz", "", "dB"};
+    juce::String label_text[6] = {"IN Gain", "OUT Gain", "Threshold", "Threshold 1", "Threshold 2", "Another Slider"};
     
     juce::Label textLabel { {}, "Select type of distortion:" };
     juce::Font textFont   { 12.0f };
@@ -62,6 +64,9 @@ private:
     
     // GUI DEBUG
     juce::Label debugLabel;
+    juce::Label durationLabel;
+    juce::Slider durationSlider;
+    
     
     // GUI-called functions
     void sliderValueChanged(juce::Slider* currentSlider) override;
