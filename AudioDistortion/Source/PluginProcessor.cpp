@@ -160,9 +160,11 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
             switch (distortion_type)
             {
                 // Hard clipping
+                // slider_value
+                //  1 -> Threshold (0, 1)
                 case 0:
                 {
-                    float threshold = 0.5f;
+                    float threshold = slider_value[1];
                     if (in > threshold)
                         out = threshold;
                     else if (in < -threshold)
@@ -302,4 +304,5 @@ void CMLS_HW2AudioProcessor::set_slider_value(int slider_number, float val)
 void CMLS_HW2AudioProcessor::set_distortion_type(int dist_type)
 {
     distortion_type = dist_type;
+    //cout
 }

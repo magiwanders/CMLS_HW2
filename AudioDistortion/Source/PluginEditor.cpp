@@ -73,7 +73,7 @@ void CMLS_HW2AudioProcessorEditor::resized()
 // GUI-called functions
 void CMLS_HW2AudioProcessorEditor::sliderValueChanged(juce::Slider* currentSlider)
 {
-    debugLabel.setText (juce::String(currentSlider->getValue()), juce::dontSendNotification);
+    //debugLabel.setText (juce::String(currentSlider->getValue()), juce::dontSendNotification);
     
     for(i=0; i<N_SLIDERS; i++) {
         if (currentSlider == &slider[i]) {
@@ -90,8 +90,8 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
     switch (typesOfDistortionMenu.getSelectedId())
     {
         case 1: {
-            int isVisibleNew[5] = {1, 0, 0, 0, 0};
-            int newType[5] = {1, 0, 0, 0, 0};
+            int isVisibleNew[5] = {1, 1, 0, 0, 1};
+            int newType[5] = {4, 1, 0, 0, 4};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
         }; break;
