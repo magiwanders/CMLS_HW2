@@ -54,12 +54,14 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
     
     // SETTERS
-    void set_clip(float val);
+    void set_slider_value(int slider_number, float val);
+    void set_distortion_type(int dist_type);
 
 private:
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (CMLS_HW2AudioProcessor)
     
     // Custom variables
-    float clip;
+    float slider_value[5];
+    int distortion_type;
 };

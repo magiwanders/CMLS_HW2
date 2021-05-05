@@ -180,8 +180,8 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
         //   channelOutDataL[i] = currentSample;
         //    channelOutDataR[i] = currentSample;
         //}
-        channelOutDataL[i] = currentSample*clip;
-        channelOutDataR[i] = currentSample*clip;
+        //channelOutDataL[i] = currentSample*clip;
+        //channelOutDataR[i] = currentSample*clip;
     }
     
 }
@@ -221,7 +221,12 @@ juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 
 // SETTERS implementation 
 
-void CMLS_HW2AudioProcessor::set_clip(float val)
+void CMLS_HW2AudioProcessor::set_slider_value(int slider_number, float val)
 {
-    clip = val;
+    slider_value[slider_number] = val;
+}
+
+void CMLS_HW2AudioProcessor::set_distortion_type(int dist_type)
+{
+    distortion_type = dist_type;
 }

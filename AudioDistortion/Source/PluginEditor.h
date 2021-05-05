@@ -11,6 +11,18 @@
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
 
+#define N_SLIDERS 5
+#define N_OPTIONS 11
+
+/*
+Types of sliders:
+    0 -> dB (-24, +24)
+    1 -> normalized (0, 1)
+    2 -> Hz (20, 20k)
+    3 -> Audio lin (-1, 1)
+    4 -> Audio dB (-80, +6)
+*/
+
 //==============================================================================
 /**
 */
@@ -29,14 +41,33 @@ private:
     // access the processor object that created it.
     CMLS_HW2AudioProcessor& audioProcessor;
     
+    // Utility
+    int i;
+    
     // GUI declarations
-    juce::Slider clipSlider;
-    juce::Label textLabel { {}, "The quick brown fox jumps over the lazy dog." };
+    juce::Label label[N_SLIDERS];
+    juce::String label_text[N_SLIDERS] = {"dB Slider", "0-1 Slider", "Hz Slider", "Audio (lin) Slider", "Audio (dB) Slider"};
+    int isVisible[N_SLIDERS] = {1, 1, 1, 1, 1};
+    int sliderType[N_SLIDERS] = {0, 1, 2, 3, 4};
+    juce::Slider slider[N_SLIDERS];
+    
+    // Characteristics of the 5 types of slider
+    int limits[5][2] = {{-24, 24}, {0, 1}, {20, 20000}, {-1, 1}, {-80, 6}};
+    juce::String suffix[5] = {"dB", "", "Hz", "", "dB"};
+    
+    juce::Label textLabel { {}, "Select type of distortion:" };
     juce::Font textFont   { 12.0f };
-    juce::ComboBox styleMenu;
+    juce::ComboBox typesOfDistortionMenu;
+    juce::String optns[N_OPTIONS] = {"Hard Clipping", "Soft Clipping", "Exponential Soft Clipping", "Full Wave Rectifier", "Half Wave Rectifier","Tube Saturation", "Even Harmonic Distortion", "Odd Harmonic Distortion", "Intermodulation Distortion", "Slew Rate & Overshoot Distortion", "Phase Distortion"};    
+    
+    // GUI DEBUG
+    juce::Label debugLabel;
     
     // GUI-called functions
-    void sliderValueChanged(juce::Slider* slider) override;
+    void sliderValueChanged(juce::Slider* currentSlider) override;
+    void styleMenuChanged();
+    void renderSliders();
+    void allInvisible();
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (CMLS_HW2AudioProcessorEditor)
 };
