@@ -139,28 +139,93 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
     // In case we have more outputs than inputs, this code clears any output
-    // channels that didn't contain input data, (because these aren't
-    // guaranteed to be empty - they may contain garbage).
-    // This is here to avoid people getting screaming feedback
-    // when they first compile a plugin, but obviously you don't need to keep
-    // this code if your algorithm always overwrites all the output channels.
+    // channels that didn't contain input data
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    // Make sure to reset the state if your inner loop is processing
-    // the samples and the outer loop is handling the channels.
-    // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
+    // For each channel...
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
-        auto* channelData = buffer.getWritePointer (channel);
+        float* channelData = buffer.getWritePointer (channel);
+        float out;
+        // For each sample of the channel...
+        for (int sample = 0; sample < buffer.getNumSamples(); ++sample)
+        {
+            // Step 1: apply the input gain
+            const float in = channelData[sample] * paramInputGain.getNextValue();
 
-        // ..do something to the data...
+            // Step 2: apply the distortion that has been selected by the user
+            switch ((int)paramDistortionType.getTargetValue())
+            {
+                case distortionTypeHardClipping:
+                {
+                    float threshold = 0.5f;
+                    if (in > threshold)
+                        out = threshold;
+                    else if (in < -threshold)
+                        out = -threshold;
+                    else
+                        out = in;
+                    break;
+                }
+                case distortionTypeSoftClipping:
+                {
+                    float threshold1 = 1.0f / 3.0f;
+                    float threshold2 = 2.0f / 3.0f;
+                    if (in > threshold2)
+                        out = 1.0f;
+                    else if (in > threshold1)
+                        out = 1.0f - powf (2.0f - 3.0f * in, 2.0f) / 3.0f;
+                    else if (in < -threshold2)
+                        out = -1.0f;
+                    else if (in < -threshold1)
+                        out = -1.0f + powf (2.0f + 3.0f * in, 2.0f) / 3.0f;
+                    else
+                        out = 2.0f * in;
+                    out *= 0.5f;
+                    break;
+                }
+                case distortionTypeExponential:
+                {
+                    if (in > 0.0f)
+                        out = 1.0f - expf (-in);
+                    else
+                        out = -1.0f + expf (in);
+                    break;
+                }
+                case distortionTypeFullWaveRectifier:
+                {
+                    out = fabsf (in);
+                    break;
+                }
+                case distortionTypeHalfWaveRectifier:
+                {
+                    if (in > 0.0f)
+                        out = in;
+                    else
+                        out = 0.0f;
+                    break;
+                }
+                case interModulationDistortion:
+                {
+                    out = powf(in, 2);
+                }
+            }
+
+            // Step 3: apply the lowpass filter
+            // This is both to avoid aliasing and give a further parameter to control
+            // TODO ....
+            //float filtered = filters[channel]->processSingleSampleRaw (out);
+            float filtered = out;
+
+            // Step 4: apply the output gain
+            // TODO ....
+            channelData[sample] = filtered * paramOutputGain.getNextValue();
+        }
     }
     
-    // IMPLEMENTATION
+    // OLD IMPLEMENTATION
+    /*
     const float* channelInData = buffer.getReadPointer(0);
     
     float* channelOutDataL = buffer.getWritePointer(0);
@@ -180,9 +245,15 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
         //   channelOutDataL[i] = currentSample;
         //    channelOutDataR[i] = currentSample;
         //}
+<<<<<<< HEAD
         //channelOutDataL[i] = currentSample*clip;
         //channelOutDataR[i] = currentSample*clip;
     }
+=======
+        channelOutDataL[i] = currentSample*clip;
+        channelOutDataR[i] = currentSample*clip;
+    }*/
+>>>>>>> 56d72c776375135502da0c9e76f72af8eed75836
     
 }
 
