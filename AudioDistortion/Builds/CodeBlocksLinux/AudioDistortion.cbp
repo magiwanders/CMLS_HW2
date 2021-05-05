@@ -29,6 +29,7 @@
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_utils=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_core=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_data_structures=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_dsp=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_events=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_graphics=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_gui_basics=&quot;1&quot;"/>
@@ -134,6 +135,7 @@
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_utils=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_core=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_data_structures=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_dsp=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_events=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_graphics=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_gui_basics=&quot;1&quot;"/>
@@ -238,6 +240,7 @@
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_utils=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_core=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_data_structures=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_dsp=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_events=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_graphics=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_gui_basics=&quot;1&quot;"/>
@@ -342,6 +345,7 @@
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_utils=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_core=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_data_structures=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_dsp=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_events=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_graphics=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_gui_basics=&quot;1&quot;"/>
@@ -6254,6 +6258,510 @@
       <Option compile="0"/>
       <Option link="0"/>
     </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/containers/juce_AudioBlock.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/containers/juce_AudioBlock_test.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/containers/juce_FixedSizeFunction.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/containers/juce_FixedSizeFunction_test.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/containers/juce_SIMDRegister.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/containers/juce_SIMDRegister_Impl.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/containers/juce_SIMDRegister_test.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/filter_design/juce_FilterDesign.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/filter_design/juce_FilterDesign.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/frequency/juce_Convolution.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/frequency/juce_Convolution.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/frequency/juce_Convolution_test.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/frequency/juce_FFT.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/frequency/juce_FFT.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/frequency/juce_FFT_test.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/frequency/juce_Windowing.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/frequency/juce_Windowing.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/maths/juce_FastMathApproximations.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/maths/juce_LogRampedValue.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/maths/juce_LogRampedValue_test.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/maths/juce_LookupTable.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/maths/juce_LookupTable.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/maths/juce_Matrix.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/maths/juce_Matrix.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/maths/juce_Matrix_test.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/maths/juce_Phase.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/maths/juce_Polynomial.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/maths/juce_SpecialFunctions.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/maths/juce_SpecialFunctions.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/native/juce_avx_SIMDNativeOps.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/native/juce_avx_SIMDNativeOps.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/native/juce_fallback_SIMDNativeOps.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/native/juce_neon_SIMDNativeOps.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/native/juce_neon_SIMDNativeOps.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/native/juce_sse_SIMDNativeOps.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/native/juce_sse_SIMDNativeOps.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_BallisticsFilter.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_BallisticsFilter.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_DelayLine.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_DelayLine.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_DryWetMixer.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_DryWetMixer.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_FIRFilter.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_FIRFilter.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_FIRFilter_test.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_FirstOrderTPTFilter.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_FirstOrderTPTFilter.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_IIRFilter.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_IIRFilter.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_IIRFilter_Impl.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_LinkwitzRileyFilter.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_LinkwitzRileyFilter.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_Oversampling.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_Oversampling.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_Panner.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_Panner.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_ProcessContext.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_ProcessorChain.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_ProcessorChain_test.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_ProcessorDuplicator.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_ProcessorWrapper.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_StateVariableFilter.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_StateVariableTPTFilter.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/processors/juce_StateVariableTPTFilter.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_Bias.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_Chorus.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_Chorus.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_Compressor.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_Compressor.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_Gain.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_LadderFilter.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_LadderFilter.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_Limiter.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_Limiter.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_NoiseGate.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_NoiseGate.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_Oscillator.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_Phaser.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_Phaser.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_Reverb.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/widgets/juce_WaveShaper.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/juce_dsp.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/juce_dsp.mm">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_dsp/juce_dsp.h">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
     <Unit filename="../../../../../../../../../../../usr/share/juce/modules/juce_events/broadcasters/juce_ActionBroadcaster.cpp">
       <Option target="Shared Code | Debug"/>
       <Option target="Shared Code | Release"/>
@@ -9647,6 +10155,10 @@
       <Option target="Shared Code | Release"/>
     </Unit>
     <Unit filename="../../JuceLibraryCode/include_juce_data_structures.cpp">
+      <Option target="Shared Code | Debug"/>
+      <Option target="Shared Code | Release"/>
+    </Unit>
+    <Unit filename="../../JuceLibraryCode/include_juce_dsp.cpp">
       <Option target="Shared Code | Debug"/>
       <Option target="Shared Code | Release"/>
     </Unit>

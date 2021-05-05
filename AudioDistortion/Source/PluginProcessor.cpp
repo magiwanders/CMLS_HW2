@@ -98,6 +98,16 @@ void CMLS_HW2AudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlo
     
     // BUFFER INITIALIZATION
     float clip_default = 1.0;
+
+    // Low pass filter initialization
+    // (one for each input channel)
+    filters.clear();
+    for (int i = 0; i < getTotalNumInputChannels(); ++i)
+    {
+        LowPassFilter* filter;
+        filters.add (filter = new LowPassFilter());
+    }
+    updateFilters();
 }
 
 void CMLS_HW2AudioProcessor::releaseResources()
@@ -225,9 +235,8 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
 
             // Step 3: apply the lowpass filter
             // This is both to avoid aliasing and give a further parameter to control
-            // TODO ....
-            //float filtered = filters[channel]->processSingleSampleRaw (out);
-            float filtered = out * 1.0;
+            float filtered = filters[channel]->processSingleSampleRaw (out);
+            //float filtered = out * 1.0;
 
             // Step 4: apply the output gain
             float outputGainDB = slider_value[4];
@@ -235,32 +244,24 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
             channelData[sample] = filtered * outputGain;
         }
     }
-    
-    // OLD IMPLEMENTATION
-    /*
-    const float* channelInData = buffer.getReadPointer(0);
-    
-    float* channelOutDataL = buffer.getWritePointer(0);
-    float* channelOutDataR = buffer.getWritePointer(1);
-    
-    for (int i = 0; i < buffer.getNumSamples(); ++i) {
-        float currentSample = channelInData[i];
-        //float clip_norm = clip * *std::max_element(channelInData, channelInData+buffer.getNumSamples());
-        
-        //if (currentSample > clip_norm) {
-        //    channelOutDataL[i] = clip_norm; 
-        //    channelOutDataR[i] = clip_norm;
-        //} else if (currentSample < -clip_norm) {
-        //   channelOutDataL[i] = -clip_norm;
-        //    channelOutDataR[i] = -clip_norm;
-        //} else {
-        //   channelOutDataL[i] = currentSample;
-        //    channelOutDataR[i] = currentSample;
-        //}
-        //channelOutDataL[i] = currentSample*clip;
-        //channelOutDataR[i] = currentSample*clip;
-     */
 }
+
+//==============================================================================
+
+void CMLS_HW2AudioProcessor::updateFilters()
+{
+    //double low_pass_frequency = M_PI * slider_value[3];
+    double low_pass_frequency = M_PI * 0.001;
+
+    for (int i = 0; i < filters.size(); ++i)
+    {
+        filters[i]->updateCoefficients (low_pass_frequency);
+    }
+}
+
+//==============================================================================
+
+
 
 //==============================================================================
 bool CMLS_HW2AudioProcessor::hasEditor() const

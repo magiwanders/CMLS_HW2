@@ -54,8 +54,10 @@ void CMLS_HW2AudioProcessorEditor::resized()
 
     // Sliders
     int j=0;
-    for (i=0; i<N_SLIDERS; i++) {
-        if (isVisible[i]) {
+    for (i=0; i<N_SLIDERS; i++)
+    {
+        if (isVisible[i])
+        {
             slider[i].setBounds(100, 100+j*50, getWidth()-110, 20);
             label[i].setBounds(10, 100+j*50, getWidth()-110, 20);
             j++;

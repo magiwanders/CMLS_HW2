@@ -9,6 +9,7 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include <juce_audio_utils/juce_audio_utils.h>
 #define _USE_MATH_DEFINES
 #include <cmath>
 
@@ -58,6 +59,30 @@ public:
     // SETTERS
     void set_slider_value(int slider_number, float val);
     void set_distortion_type(int dist_type);
+
+    // LOW-PASS FILTER
+    class LowPassFilter : public IIRFilter
+    {
+    public:
+        void updateCoefficients (const double low_pass_frequency) noexcept
+        {
+            jassert (low_pass_frequency > 0);
+
+            double tan_half_wc = tan (low_pass_frequency / 2.0);
+
+            coefficients = IIRCoefficients (/* b0 */ tan_half_wc,
+                                            /* b1 */ tan_half_wc,
+                                            /* b2 */ 0.0,
+                                            /* a0 */ 0.0,
+                                            /* a1 */ 0.0,
+                                            /* a2 */ 0.0);
+
+            setCoefficients (coefficients);
+        }
+    };
+
+    OwnedArray<LowPassFilter> filters;
+    void updateFilters();
 
 private:
     //==============================================================================
