@@ -162,7 +162,7 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                 // Hard clipping
                 // slider_value
                 //  1 -> Threshold (0, 1)
-                case 0:
+                case 1:
                 {
                     float threshold = slider_value[1];
                     if (in > threshold)
@@ -174,7 +174,7 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                     break;
                 }
                 // Soft clipping
-                case 1:
+                case 2:
                 {
                     float threshold1 = 1.0f / 3.0f;
                     float threshold2 = 2.0f / 3.0f;
@@ -192,7 +192,7 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                     break;
                 }
                 // Exponential soft clipping
-                case 2:
+                case 3:
                 {
                     if (in > 0.0f)
                         out = 1.0f - expf (-in);
@@ -201,13 +201,13 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                     break;
                 }
                 // Full wave rectifier
-                case 3:
+                case 4:
                 {
                     out = fabsf (in);
                     break;
                 }
                 // Half wave rectifier
-                case 4:
+                case 5:
                 {
                     if (in > 0.0f)
                         out = in;
@@ -216,7 +216,7 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                     break;
                 }
                 // Intermodulation distortion
-                case 8:
+                case 9:
                 {
                     out = powf(in, 2);
                 }
@@ -304,5 +304,7 @@ void CMLS_HW2AudioProcessor::set_slider_value(int slider_number, float val)
 void CMLS_HW2AudioProcessor::set_distortion_type(int dist_type)
 {
     distortion_type = dist_type;
+    std::cout << "dist_type: " << dist_type << std::endl;
+    std::cout << "distortion_type: " << distortion_type << std::endl;
     //cout
 }

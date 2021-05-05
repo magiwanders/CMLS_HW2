@@ -74,16 +74,16 @@ private:
 
 
     int distortion_type;
-    /* 0: Hard Clipping
-     * 1: Soft Clipping
-     * 2: Exponential Soft Clipping
-     * 3: Full Wave Rectifier
-     * 4: Half Wave Rectifier
-     * 5: Tube Saturation
-     * 6: Even Harmonic Distortion
-     * 7: Odd Harmonic Distortion
-     * 8: Intermodulation Distortion
-     * 9: Slew Rate & Overshoot Distortion
-     * 10: Phase Distortion
+    /* 1: Hard Clipping
+     * 2: Soft Clipping
+     * 3: Exponential Soft Clipping
+     * 4: Full Wave Rectifier
+     * 5: Half Wave Rectifier
+     * 6: Tube Saturation
+     * 7: Even Harmonic Distortion
+     * 8: Odd Harmonic Distortion
+     * 9: Intermodulation Distortion
+     * 10: Slew Rate & Overshoot Distortion
+     * 11: Phase Distortion
      */
 };
