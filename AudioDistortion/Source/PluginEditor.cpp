@@ -230,7 +230,7 @@ void CMLS_HW2AudioProcessorEditor::renderSliders()
             addAndMakeVisible(label[i]);
         }
         
-        slider[i].setRange(limits[st][0], limits[st][1]);
+        slider[i].setRange(limits[st][0], limits[st][1], limits[st][2]);
         slider[i].setTextValueSuffix(suffix[st]);
         slider[i].addListener(this);
         audioProcessor.set_slider_value(i, default_value[i]);
