@@ -164,7 +164,10 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
             // Step 1: apply the input gain
             float inputGainDB = slider_value[0];
             float inputGain = powf(10.0f, inputGainDB / 20.0f);
+            float prev = 0;
+            if (sample>0) prev = channelData[sample-1] * inputGain;
             const float in = channelData[sample] * inputGain;
+            if (sample<buffer.getNumSamples()-1) const float next = channelData[sample+1] * inputGain;
 
             // Step 2: apply the distortion that has been selected by the user
             switch (distortion_type)
@@ -230,6 +233,11 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                 case 9:
                 {
                     out = powf(in, 2);
+                }
+                case 10:
+                {
+                    if (in-prev>slider_value[1]) out = prev+slider_value[1];
+                    else out=in;
                 }
             }
 

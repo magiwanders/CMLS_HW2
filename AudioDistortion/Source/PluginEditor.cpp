@@ -183,10 +183,10 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
         case 10: {
-            int isVisibleNew[5] = {1, 0, 0, 0, 1};
-            int newType[5] = {4, 0, 0, 0, 4};
+            int isVisibleNew[5] = {1, 1, 0, 0, 1};
+            int newType[5] = {4, 1, 0, 0, 4};
             int newLabel[5] = {0, 0, 0, 0, 1};
-            int newDefault[5] = {0, 0, 0, 0, 0};
+            int newDefault[5] = {0, 1, 0, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
             std::copy(newLabel, newLabel+ 5, whichLabel);
