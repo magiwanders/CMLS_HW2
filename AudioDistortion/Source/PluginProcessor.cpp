@@ -251,15 +251,17 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
             float outputGain = powf(10.0f, outputGainDB / 20.0f);
             channelData[sample] = filtered * outputGain;
         }
+        updateFilters();
     }
+
 }
 
 //==============================================================================
 
 void CMLS_HW2AudioProcessor::updateFilters()
 {
-    double low_pass_frequency = M_PI * slider_value[3];
-    //double low_pass_frequency = M_PI * 0.001;
+    double low_pass_frequency = slider_value[3];
+    //std::cout << "slider_value[3]" << slider_value[3] << std::endl;
 
     for (int i = 0; i < filters.size(); ++i)
     {

@@ -78,8 +78,10 @@ void CMLS_HW2AudioProcessorEditor::sliderValueChanged(juce::Slider* currentSlide
 {
     //debugLabel.setText (juce::String(currentSlider->getValue()), juce::dontSendNotification);
     
-    for(i=0; i<N_SLIDERS; i++) {
-        if (currentSlider == &slider[i]) {
+    for(i=0; i<N_SLIDERS; i++)
+    {
+        if (currentSlider == &slider[i])
+        {
             audioProcessor.set_slider_value(i, currentSlider->getValue());
         }
     }
@@ -96,7 +98,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             int isVisibleNew[5] = {1, 1, 0, 1, 1};
             int newType[5] = {4, 1, 0, 2, 4};
             int newLabel[5] = {0, 2, 0, 5, 1};
-            int newDefault[5] = {0, 1, 0, 0, 0};
+            int newDefault[5] = {0, 1, 0, 20, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
             std::copy(newLabel, newLabel+ 5, whichLabel);

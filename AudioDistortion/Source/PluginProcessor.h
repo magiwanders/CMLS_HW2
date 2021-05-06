@@ -61,16 +61,18 @@ public:
     void set_distortion_type(int dist_type);
 
     // LOW-PASS FILTER
-    class LowPassFilter : public IIRFilter
+    class LowPassFilter : public juce::IIRFilter
     {
+    private:
+        IIRCoefficients coefficients;
     public:
         void updateCoefficients (const double sample_rate, const double low_pass_frequency) noexcept
         {
-            jassert (low_pass_frequency > 0);
+            //jassert (low_pass_frequency > 0);
 
             //double tan_half_wc = tan (low_pass_frequency / 2.0);
 
-            this->coefficients = IIRCoefficients::makeLowPass(sample_rate, low_pass_frequency);
+            this->coefficients = juce::IIRCoefficients::makeLowPass(sample_rate, low_pass_frequency);
             //coefficients = IIRCoefficients (/* b0 */ tan_half_wc,
             //                                /* b1 */ tan_half_wc,
             //                                /* b2 */ 0.0,
@@ -82,7 +84,7 @@ public:
         }
     };
 
-    OwnedArray<LowPassFilter> filters;
+    juce::OwnedArray<LowPassFilter> filters;
     void updateFilters();
 
 private:
