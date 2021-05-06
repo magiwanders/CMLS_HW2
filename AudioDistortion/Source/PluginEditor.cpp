@@ -96,19 +96,19 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
     {
         case 1: {
             int isVisibleNew[5] = {1, 1, 0, 1, 1};
-            int newType[5] = {4, 1, 0, 2, 4};
+            int newType[5] = {0, 1, 0, 2, 4};
             int newLabel[5] = {0, 2, 0, 5, 1};
-            int newDefault[5] = {0, 1, 0, 20, 0};
+            int newDefault[5] = {0, 1, 0, 2000, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
             std::copy(newLabel, newLabel+ 5, whichLabel);
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
         case 2:  {
-            int isVisibleNew[5] = {1, 1, 1, 0, 1};
-            int newType[5] = {4, 1, 1, 0, 4};
-            int newLabel[5] = {0, 3, 4, 0, 1};
-            int newDefault[5] = {0, 1, 1, 0, 0};
+            int isVisibleNew[5] = {1, 1, 1, 1, 1};
+            int newType[5] = {0, 1, 1, 2, 4};
+            int newLabel[5] = {0, 3, 4, 5, 1};
+            int newDefault[5] = {0, 1, 1, 2000, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
             std::copy(newLabel, newLabel+ 5, whichLabel);
@@ -185,10 +185,10 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
         case 10: {
-            int isVisibleNew[5] = {1, 1, 0, 0, 1};
-            int newType[5] = {4, 1, 0, 0, 4};
-            int newLabel[5] = {0, 0, 0, 0, 1};
-            int newDefault[5] = {0, 1, 0, 0, 0};
+            int isVisibleNew[5] = {1, 1, 0, 1, 1};
+            int newType[5] = {0, 1, 0, 2, 4};
+            int newLabel[5] = {0, 6, 0, 5, 1};
+            int newDefault[5] = {0, 1, 0, 2000, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
             std::copy(newLabel, newLabel+ 5, whichLabel);
