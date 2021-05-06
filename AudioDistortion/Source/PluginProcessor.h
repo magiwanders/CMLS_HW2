@@ -64,18 +64,19 @@ public:
     class LowPassFilter : public IIRFilter
     {
     public:
-        void updateCoefficients (const double low_pass_frequency) noexcept
+        void updateCoefficients (const double sample_rate, const double low_pass_frequency) noexcept
         {
             jassert (low_pass_frequency > 0);
 
-            double tan_half_wc = tan (low_pass_frequency / 2.0);
+            //double tan_half_wc = tan (low_pass_frequency / 2.0);
 
-            coefficients = IIRCoefficients (/* b0 */ tan_half_wc,
-                                            /* b1 */ tan_half_wc,
-                                            /* b2 */ 0.0,
-                                            /* a0 */ 0.0,
-                                            /* a1 */ 0.0,
-                                            /* a2 */ 0.0);
+            coefficients = IIRCoefficients::makeLowPass(sample_rate, low_pass_frequency);
+            //coefficients = IIRCoefficients (/* b0 */ tan_half_wc,
+            //                                /* b1 */ tan_half_wc,
+            //                                /* b2 */ 0.0,
+            //                                /* a0 */ 0.0,
+            //                                /* a1 */ 0.0,
+            //                                /* a2 */ 0.0);
 
             setCoefficients (coefficients);
         }

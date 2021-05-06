@@ -93,9 +93,9 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
     switch (typesOfDistortionMenu.getSelectedId())
     {
         case 1: {
-            int isVisibleNew[5] = {1, 1, 0, 0, 1};
-            int newType[5] = {4, 1, 0, 0, 4};
-            int newLabel[5] = {0, 2, 0, 0, 1};
+            int isVisibleNew[5] = {1, 1, 0, 1, 1};
+            int newType[5] = {4, 1, 0, 2, 4};
+            int newLabel[5] = {0, 2, 0, 5, 1};
             int newDefault[5] = {0, 1, 0, 0, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);

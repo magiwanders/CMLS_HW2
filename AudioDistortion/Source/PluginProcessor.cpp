@@ -258,12 +258,12 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
 
 void CMLS_HW2AudioProcessor::updateFilters()
 {
-    //double low_pass_frequency = M_PI * slider_value[3];
-    double low_pass_frequency = M_PI * 0.001;
+    double low_pass_frequency = M_PI * slider_value[3];
+    //double low_pass_frequency = M_PI * 0.001;
 
     for (int i = 0; i < filters.size(); ++i)
     {
-        filters[i]->updateCoefficients (low_pass_frequency);
+        filters[i]->updateCoefficients (getSampleRate(), low_pass_frequency);
     }
 }
 
