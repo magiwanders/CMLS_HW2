@@ -64,7 +64,7 @@ public:
     class LowPassFilter : public juce::IIRFilter
     {
     private:
-        IIRCoefficients coefficients;
+        juce::IIRCoefficients coefficients;
     public:
         void updateCoefficients (const double sample_rate, const double low_pass_frequency) noexcept
         {

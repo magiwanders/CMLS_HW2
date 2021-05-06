@@ -54,14 +54,15 @@ private:
     
     // Characteristics of the 5 types of slider
     float limits[5][3] = {{-24, 24, 0.01}, {0, 1, 0.001}, {20, 20000, 1}, {-1, 1, 0.001}, {-24, 24, 0.01}};
-    float skew_value[5] = {1, 0.3, 1, 1, 3};
+    float skew_value[5] = {1, 0.3, 0.6, 1, 3};
     juce::String suffix[5] = {"dB", "", "Hz", "", "dB"};
-    juce::String label_text[6] = {"IN Gain",
+    juce::String label_text[7] = {"IN Gain",
                                   "OUT Gain",
                                   "Clipping\nthreshold",
                                   "Threshold 1",
                                   "Threshold 2",
-                                  "LPF frequency"};
+                                  "LPF frequency",
+                                  "Maximum Slew Rate"};
     
     juce::Label textLabel { {}, "Select type of distortion:" };
     juce::Font textFont   { 12.0f };
