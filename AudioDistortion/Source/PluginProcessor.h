@@ -70,7 +70,7 @@ public:
 
             //double tan_half_wc = tan (low_pass_frequency / 2.0);
 
-            coefficients = IIRCoefficients::makeLowPass(sample_rate, low_pass_frequency);
+            this->coefficients = IIRCoefficients::makeLowPass(sample_rate, low_pass_frequency);
             //coefficients = IIRCoefficients (/* b0 */ tan_half_wc,
             //                                /* b1 */ tan_half_wc,
             //                                /* b2 */ 0.0,
@@ -78,7 +78,7 @@ public:
             //                                /* a1 */ 0.0,
             //                                /* a2 */ 0.0);
 
-            setCoefficients (coefficients);
+            this->setCoefficients (this->coefficients);
         }
     };
 
