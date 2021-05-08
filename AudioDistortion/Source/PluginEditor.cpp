@@ -94,7 +94,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
     audioProcessor.set_distortion_type(typesOfDistortionMenu.getSelectedId());
     switch (typesOfDistortionMenu.getSelectedId())
     {
-        case 1: {
+        case hard_clipping: {
             int isVisibleNew[5] = {1, 1, 0, 1, 1};
             int newType[5] = {0, 1, 0, 2, 4};
             int newLabel[5] = {0, 2, 0, 5, 1};
@@ -104,7 +104,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newLabel, newLabel+ 5, whichLabel);
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
-        case 2:  {
+        case soft_clipping:  {
             int isVisibleNew[5] = {1, 1, 1, 1, 1};
             int newType[5] = {0, 1, 1, 2, 4};
             int newLabel[5] = {0, 3, 4, 5, 1};
@@ -114,7 +114,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newLabel, newLabel+ 5, whichLabel);
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
-        case 3:  {
+        case exponential_soft_clipping:  {
             int isVisibleNew[5] = {1, 0, 5, 0, 1};
             int newType[5] = {4, 0, 0, 0, 4};
             int newLabel[5] = {0, 0, 0, 0, 1};
@@ -124,7 +124,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newLabel, newLabel+ 5, whichLabel);
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
-        case 4:  {
+        case full_wave_rectifier:  {
             int isVisibleNew[5] = {1, 0, 0, 0, 1};
             int newType[5] = {4, 0, 0, 0, 4};
             int newLabel[5] = {0, 0, 0, 0, 1};
@@ -134,7 +134,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newLabel, newLabel+ 5, whichLabel);
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
-        case 5:  {
+        case half_wave_rectifier:  {
             int isVisibleNew[5] = {1, 0, 0, 0, 1};
             int newType[5] = {4, 0, 0, 0, 4};
             int newLabel[5] = {0, 0, 0, 0, 1};
@@ -144,7 +144,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newLabel, newLabel+ 5, whichLabel);
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
-        case 6:  {
+        case tube_saturation:  {
             int isVisibleNew[5] = {1, 0, 0, 0, 1};
             int newType[5] = {4, 0, 0, 0, 4};
             int newLabel[5] = {0, 0, 0, 0, 1};
@@ -154,7 +154,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newLabel, newLabel+ 5, whichLabel);
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
-        case 7:  {
+        case even_harmonic_distortion:  {
             int isVisibleNew[5] = {1, 0, 0, 0, 1};
             int newType[5] = {4, 0, 0, 0, 4};
             int newLabel[5] = {0, 0, 0, 0, 1};
@@ -164,7 +164,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newLabel, newLabel+ 5, whichLabel);
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
-        case 8:  {
+        case odd_harmonic_distortion:  {
             int isVisibleNew[5] = {1, 0, 0, 0, 1};
             int newType[5] = {4, 0, 0, 0, 4};
             int newLabel[5] = {0, 0, 0, 0, 1};
@@ -174,7 +174,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newLabel, newLabel+ 5, whichLabel);
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
-        case 9:  {
+        case intermodulation_distortion:  {
             int isVisibleNew[5] = {1, 0, 0, 0, 1};
             int newType[5] = {4, 0, 0, 0, 4};
             int newLabel[5] = {0, 0, 0, 0, 1};
@@ -184,7 +184,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newLabel, newLabel+ 5, whichLabel);
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
-        case 10: {
+        case slew_rate_and_overshoot_distortion: {
             int isVisibleNew[5] = {1, 1, 0, 1, 1};
             int newType[5] = {0, 1, 0, 2, 4};
             int newLabel[5] = {0, 6, 0, 5, 1};
@@ -194,7 +194,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newLabel, newLabel+ 5, whichLabel);
             std::copy(newDefault, newDefault +5, default_value);
         };  break;
-        case 11:  {
+        case phase_distortion:  {
             int isVisibleNew[5] = {1, 0, 0, 0, 1};
             int newType[5] = {4, 0, 0, 0, 4};
             int newLabel[5] = {0, 0, 0, 0, 1};

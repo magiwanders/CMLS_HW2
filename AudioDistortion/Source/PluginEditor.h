@@ -10,6 +10,7 @@
 
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
+#include "PluginParameters.h"
 
 #define N_SLIDERS 5
 #define N_OPTIONS 11

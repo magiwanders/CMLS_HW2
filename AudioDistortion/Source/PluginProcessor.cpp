@@ -174,7 +174,7 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
             {
                 // Hard clipping
                 //  1 -> Threshold (0, 1)
-                case 1:
+                case hard_clipping:
                 {
                     float threshold = slider_value[1];
                     if (in > threshold)
@@ -188,7 +188,7 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                 // Soft clipping
                 //  1 -> Threshold 1 (0, 1)
                 //  2 -> Threshold 2 (0, 1)
-                case 2:
+                case soft_clipping:
                 {
                     float threshold1 = slider_value[1];
                     float threshold2 = slider_value[2];
@@ -206,7 +206,7 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                     break;
                 }
                 // Exponential soft clipping
-                case 3:
+                case exponential_soft_clipping:
                 {
                     if (in > 0.0f)
                         out = 1.0f - expf (-in);
@@ -215,13 +215,13 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                     break;
                 }
                 // Full wave rectifier
-                case 4:
+                case full_wave_rectifier:
                 {
                     out = fabsf (in);
                     break;
                 }
                 // Half wave rectifier
-                case 5:
+                case half_wave_rectifier:
                 {
                     if (in > 0.0f)
                         out = in;
@@ -230,11 +230,11 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                     break;
                 }
                 // Intermodulation distortion
-                case 9:
+                case intermodulation_distortion:
                 {
                     out = powf(in, 2);
                 }
-                case 10:
+                case slew_rate_and_overshoot_distortion:
                 {
                     if (in-prev>slider_value[1]) out = prev+slider_value[1];
                     else out=in;
