@@ -49,17 +49,20 @@ private:
         {-1, 1, 0.001},
         {-24, 24, 0.01}
     };
-    float skew_value[5] = {1, 0.3, 0.6, 1, 3};
+    float skew_value[5] = {1, 0.3, 0.6, 1, 0.5};
     juce::String suffix[5] = {"dB", "", "Hz", "", "dB"};
     juce::String label_text[7] =
     {
         "IN Gain",
         "OUT Gain",
-        "Clipping\nthreshold",
+        "Clipping\n"
+        "threshold",
         "Threshold 1",
         "Threshold 2",
-        "LPF frequency",
-        "Maximum Slew Rate"
+        "Low-pass\n"
+        "threshold",
+        "Maximum\n"
+        "Slew Rate"
     };
     
     juce::Label textLabel { {}, "Select type of distortion:" };
@@ -72,11 +75,6 @@ private:
         "Intermodulation Distortion", "Slew Rate & Overshoot Distortion"};
             /*"Tube Saturation", "Even Harmonic Distortion",
             "Odd Harmonic Distortion", "Phase Distortion"};*/
-    
-    // GUI DEBUG
-    juce::Label debugLabel;
-    juce::Label durationLabel;
-    juce::Slider durationSlider;
     
     
     // GUI-called functions

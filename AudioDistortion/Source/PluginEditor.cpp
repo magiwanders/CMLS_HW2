@@ -78,7 +78,6 @@ void CMLS_HW2AudioProcessorEditor::sliderValueChanged(juce::Slider* currentSlide
 // Takes care of showing the right sliders for each distortion type
 void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
 {
-    debugLabel.setText (juce::String(typesOfDistortionMenu.getSelectedId()), juce::dontSendNotification);
     audioProcessor.set_distortion_type(typesOfDistortionMenu.getSelectedId());
     switch (typesOfDistortionMenu.getSelectedId())
     {
@@ -105,8 +104,8 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
         case exponential_soft_clipping:  {
             int isVisibleNew[5] = {true, false, false, true, true};
             int newType[5] = {input_gain_slider, 0, 0, low_pass_slider, output_gain_slider};
-            int newLabel[5] = {0, 0, 0, 0, 1};
-            int newDefault[5] = {0, 0, 0, 0, 0};
+            int newLabel[5] = {0, 0, 0, 5, 1};
+            int newDefault[5] = {0, 0, 0, 2000, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
             std::copy(newLabel, newLabel+ 5, whichLabel);
@@ -115,8 +114,8 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
         case full_wave_rectifier:  {
             int isVisibleNew[5] = {true, false, false, true, true};
             int newType[5] = {input_gain_slider, 0, 0, low_pass_slider, output_gain_slider};
-            int newLabel[5] = {0, 0, 0, 0, 1};
-            int newDefault[5] = {0, 0, 0, 0, 0};
+            int newLabel[5] = {0, 0, 0, 5, 1};
+            int newDefault[5] = {0, 0, 0, 2000, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
             std::copy(newLabel, newLabel+ 5, whichLabel);
@@ -125,8 +124,8 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
         case half_wave_rectifier:  {
             int isVisibleNew[5] = {true, false, false, true, true};
             int newType[5] = {input_gain_slider, 0, 0, low_pass_slider, output_gain_slider};
-            int newLabel[5] = {0, 0, 0, 0, 1};
-            int newDefault[5] = {0, 0, 0, 0, 0};
+            int newLabel[5] = {0, 0, 0, 5, 1};
+            int newDefault[5] = {0, 0, 0, 2000, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
             std::copy(newLabel, newLabel+ 5, whichLabel);
@@ -165,8 +164,8 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
         case intermodulation_distortion:  {
             int isVisibleNew[5] = {true, false, false, true, true};
             int newType[5] = {input_gain_slider, 0, 0, low_pass_slider, output_gain_slider};
-            int newLabel[5] = {0, 0, 0, 0, 1};
-            int newDefault[5] = {0, 0, 0, 0, 0};
+            int newLabel[5] = {0, 0, 0, 5, 1};
+            int newDefault[5] = {0, 0, 0, 2000, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
             std::copy(newLabel, newLabel+ 5, whichLabel);
@@ -195,8 +194,8 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
         default:  {
             int isVisibleNew[5] = {true, false, false, true, true};
             int newType[5] = {input_gain_slider, 0, 0, output_gain_slider, output_gain_slider};
-            int newLabel[5] = {0, 0, 0, 0, 1};
-            int newDefault[5] = {0, 0, 0, 0, 0};
+            int newLabel[5] = {0, 0, 0, 5, 1};
+            int newDefault[5] = {0, 0, 0, 2000, 0};
             std::copy(isVisibleNew, isVisibleNew + 5, isVisible);
             std::copy(newType, newType + 5, sliderType);
             std::copy(newLabel, newLabel+ 5, whichLabel);

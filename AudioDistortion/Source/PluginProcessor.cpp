@@ -93,12 +93,6 @@ void CMLS_HW2AudioProcessor::changeProgramName (int index, const juce::String& n
 //==============================================================================
 void CMLS_HW2AudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
-    
-    // BUFFER INITIALIZATION
-    float clip_default = 1.0;
-
     // Low pass filter initialization
     // (one for each input channel)
     filters.clear();
@@ -164,10 +158,13 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
             // Step 1: apply the input gain
             float inputGainDB = slider_value[0];
             float inputGain = powf(10.0f, inputGainDB / 20.0f);
+
             float prev = 0;
-            if (sample>0) prev = channelData[sample-1] * inputGain;
+            if (sample>0)
+                prev = channelData[sample-1] * inputGain;
             const float in = channelData[sample] * inputGain;
-            if (sample<buffer.getNumSamples()-1) const float next = channelData[sample+1] * inputGain;
+            if (sample<buffer.getNumSamples()-1)
+                const float next = channelData[sample+1] * inputGain;
 
             // Step 2: apply the distortion that has been selected by the user
             switch (distortion_type)
@@ -234,17 +231,20 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                 {
                     out = powf(in, 2);
                 }
+                // Slew rate and overshoot distortion
                 case slew_rate_and_overshoot_distortion:
                 {
-                    if (in-prev>slider_value[1]) out = prev+slider_value[1];
-                    else out=in;
+                    float max_slew_rate = slider_value[1];
+                    if (in-prev>max_slew_rate)
+                        out = prev+max_slew_rate;
+                    else
+                        out=in;
                 }
             }
 
             // Step 3: apply the lowpass filter
             // This is both to avoid aliasing and give a further parameter to control
             float filtered = filters[channel]->processSingleSampleRaw (out);
-            //float filtered = out * 1.0;
 
             // Step 4: apply the output gain
             float outputGainDB = slider_value[4];
