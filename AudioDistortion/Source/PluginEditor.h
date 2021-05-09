@@ -74,7 +74,7 @@ private:
     {
         "Hard Clipping", "Soft Clipping", "Exponential Soft Clipping",
         "Full Wave Rectifier", "Half Wave Rectifier",
-        "Intermodulation Distortion", "Slew Rate & Overshoot Distortion"};
+        "Intermodulation Distortion", "Slew Rate Distortion"};
             /*"Tube Saturation", "Even Harmonic Distortion",
             "Odd Harmonic Distortion", "Phase Distortion"};*/
     
