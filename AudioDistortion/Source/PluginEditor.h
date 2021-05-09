@@ -57,10 +57,12 @@ private:
         "OUT Gain",
         "Clipping\n"
         "threshold",
-        "Threshold 1",
-        "Threshold 2",
-        "Low-pass\n"
-        "threshold",
+        "Positive\n"
+        "Threshold\n",
+        "Negative\n"
+        "Threshold\n",
+        "Low-Pass\n"
+        "Threshold",
         "Maximum\n"
         "Slew Rate"
     };

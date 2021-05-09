@@ -54,8 +54,8 @@ void CMLS_HW2AudioProcessorEditor::resized()
     {
         if (isVisible[i])
         {
-            slider[i].setBounds(100, 100+j*50, getWidth()-110, 20);
-            label[i].setBounds(10, 100+j*50, getWidth()-110, 20);
+            slider[i].setBounds(100, 100+j*50, getWidth()-110, 40);
+            label[i].setBounds(10, 100+j*50, getWidth()-110, 40);
             j++;
         }
     }
@@ -241,5 +241,5 @@ void CMLS_HW2AudioProcessorEditor::allInvisible()
     for (i=0; i<N_SLIDERS; i++)
     {
         slider[i].setVisible(false);
-    }
+    } 
 }
