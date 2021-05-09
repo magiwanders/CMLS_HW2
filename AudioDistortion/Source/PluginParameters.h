@@ -11,7 +11,7 @@ enum distortion_type
     full_wave_rectifier,
     half_wave_rectifier,
     intermodulation_distortion,
-    slew_rate_and_overshoot_distortion,
+    slew_rate_distortion,
     tube_saturation,
     even_harmonic_distortion,
     odd_harmonic_distortion,

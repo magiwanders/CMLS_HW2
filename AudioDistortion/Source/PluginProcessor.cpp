@@ -231,8 +231,8 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                 {
                     out = powf(in, 2);
                 }
-                // Slew rate and overshoot distortion
-                case slew_rate_and_overshoot_distortion:
+                // Slew rate distortion
+                case slew_rate_distortion:
                 {
                     float max_slew_rate = slider_value[1];
                     if (in-prev>max_slew_rate)
