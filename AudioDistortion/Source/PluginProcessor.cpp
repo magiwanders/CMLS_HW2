@@ -237,6 +237,8 @@ void CMLS_HW2AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juc
                     float max_slew_rate = slider_value[1];
                     if (in-prev>max_slew_rate)
                         out = prev+max_slew_rate;
+                    else if (in-prev<-max_slew_rate)
+                        out = prev-max_slew_rate;
                     else
                         out=in;
                 }

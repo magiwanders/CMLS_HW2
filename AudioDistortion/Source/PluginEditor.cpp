@@ -171,7 +171,7 @@ void CMLS_HW2AudioProcessorEditor::styleMenuChanged()
             std::copy(newLabel, newLabel+ 5, whichLabel);
             std::copy(newDefault, newDefault +5, default_value);
         }; break;
-        case slew_rate_and_overshoot_distortion: {
+        case slew_rate_distortion: {
             int isVisibleNew[5] = {true, true, false, true, true};
             int newType[5] = {input_gain_slider, normalized_slider, 0, low_pass_slider, output_gain_slider};
             int newLabel[5] = {0, 6, 0, 5, 1};
