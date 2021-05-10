@@ -45,11 +45,11 @@ Exponential soft clipping is a nonlinear compression, obtained by subtracting to
 \paragraph{Full wave rectification} 
 Full wave rectification is achieved by reflecting the sound wave over the $x$ axis. This corresponds to making all negative sample values positive.
 \paragraph{Half wave rectification} 
-Half wave rectification is achieved by canceling any negative half wave, setting to zero any negative sample value. Both full wave and half wave rectification output signals that are no longer zero-mean.
+Half wave rectification is achieved by canceling any negative half wave, setting to zero any negative sample value. Both full wave and half wave rectification produce output signals that are no longer zero-mean.
 \paragraph{Inter-modulation distortion} 
-Inter modulation distortion consists in a "harmonic pollution" of the signal due to a square elevation of the waveform. 
+Inter-modulation distortion consists in a "harmonic pollution" of the signal due to a square elevation of the waveform. 
 \paragraph{Slew rate distortion}
-Slew rate distortion is achieved by limiting the maximum absolute difference between successive samples, effectively "cutting" each fast changing waveform portion with an oblique line. This produces an effect that vaguely resembles analogue artifacts.
+Slew rate distortion is achieved by limiting the maximum absolute difference between successive samples, effectively "cutting" each fast changing waveform portion with an oblique line. This produces an effect that vaguely resembles analogue tape artifacts.
 
 %\clearpage
 \section{Implementation in JUCE}
@@ -75,14 +75,14 @@ The \code{PluginProcessor} class implements all of the distortion effects and ta
 
 \section{Plugin usage}
 The usage of the plugin is very straightforward. There is a different number of parameters for each distortion type. Each parameter can be adjusted by means of a slider, as shown in Figure \ref{fig:parameters_soft}. The parameters are described in the following paragraphs.
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[scale=0.6]{images/cmlshw2_soft.png}
 \caption{Adjustable parameters for soft clipping}
 \label{fig:parameters_soft}
 \end{figure}
 \paragraph{Distortion type} The choice of the distortion type is made available in form of a simple combo box, as shown in Figure \ref{fig:dist_type_combobox}. One of the six options can be selected: hard clipping, soft clipping, exponential soft clipping, full-wave rectification, half-wave rectification, intermodulation distortion and slew rate distortion.
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \centering
 \includegraphics[scale=0.6]{images/cmlshw2_tendina.png}
 \caption{Distortion type selection menu}
@@ -92,9 +92,9 @@ The usage of the plugin is very straightforward. There is a different number of 
 \paragraph{Clipping threshold \textit{(For hard clipping)}} Hard clipping requires the setting of a threshold, upon or below which the waveform is cut abruptly. This means that the selected threshold acts symmetrically for the positive and the negative amplitude of the waveform.
 \paragraph{Positive threshold and negative threshold \textit{(For soft clipping)}} In the case of soft clipping, two thresholds can be set: one for the positive and another for the negative threshold. As the name suggests, the transition between to the clipped waveform is less abrupt than the hard clipping.
 \paragraph{Maximum slew rate \textit{(For slew rate distortion)}}
-This controls the maximum allowed delta value between successive samples. Mind that this applies for both "increasing" deltas (newest sample greater than previous one) and "descending" deltas.  
-\paragraph{Low-pass frequency} This slider controls the cutoff frequency (Hz) of the lowpass filter be in, which is applied after the distortion effect. The LPF is used to soften the sound and selectively reduce the harmonic pollution at the higher frequencies, which can easily be undesirable.
-\paragraph{Output gain} This slider controls the gain that is applied after the lowpass filter. This is needed to compensate for possible gain imbalances created by the distortion processing.
+This controls the maximum allowed delta value between successive samples. Mind that this applies both for increasing deltas (newest sample amplitude greater than the previous one) and descending deltas.  
+\paragraph{Low-pass frequency} This slider controls the cutoff frequency (Hz) of the lowpass filter, which is applied after the distortion effect. The LPF is used to soften the sound and selectively reduce the harmonic pollution at the higher frequencies, which can be sometimes undesirable.
+\paragraph{Output gain} This slider controls the gain that is applied after the lowpass filter. This is needed to compensate for possible gain imbalances created by the distortion processing. The range of values is between -24dB and +24dB.
 
 \bibliographystyle{unsrt}
 \bibliography{references}
